@@ -7,3 +7,11 @@ eureka:
     client:
         service-url:
             defaultZone: http://localhost:8081/eureka/
+
+ribbon:
+    eureka:
+        enabled: false
+eureka-client:
+    ribbon:
+        NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+        listOfServers: localhost:8090,localhost:8091
