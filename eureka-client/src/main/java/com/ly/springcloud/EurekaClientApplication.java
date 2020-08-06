@@ -17,6 +17,7 @@ public class EurekaClientApplication {
 
     @GetMapping("/test")
     public String test() {
+        System.out.println("I'm here~");
         return "hello, spring cloud ~";
     }
 

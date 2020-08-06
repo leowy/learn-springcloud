@@ -1,5 +1,6 @@
-server:
-    port: 8090
+#启动配置中添加端口
+#server:
+#    port: 8090
 spring:
     application:
         name: eureka-client
