@@ -7,14 +7,11 @@ spring:
 eureka:
     instance:
         #指定主机地址
-        hostname: localhost
+        hostname: peer1
     client:
         #指定是否要从注册中心获取服务（注册中心不需要开启）
         fetch-registry: false
         #指定是否要注册到注册中心（注册中心不需要开启）
         register-with-eureka: false
         service-url:
-            defaultZone: http://localhost:8083/eureka
-    server:
-        #关闭保护模式
-        enable-self-preservation: false
+            defaultZone: http://peer2:8083/eureka/
