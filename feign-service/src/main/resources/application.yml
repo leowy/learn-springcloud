@@ -1,0 +1,18 @@
+server:
+    port: 9020
+spring:
+    application:
+        name: feign-service
+eureka:
+    client:
+        service-url:
+            defaultZone: http://localhost:8081/eureka/
+feign:
+    hystrix:
+        enabled: true
+EUREKA-CLIENT:
+    ribbon:
+        ConnectTimeout: 1
+        OkToRetryOnAllOperation: true
+ribbon:
+    ConnectTimeout:
