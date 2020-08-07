@@ -1,0 +1,36 @@
+server:
+    port: 9040
+spring:
+    application:
+        name: zuul-service
+eureka:
+    client:
+        service-url:
+            defaultZone: http://localhost:8081/eureka/
+zuul:
+    routes:
+        # 其中的test1 和 api-b 可以看作服务的别名
+        # 且 需要与path的第一级目录一致
+        # 也可写成如下格式：
+        # eureka-client:
+        #     path: /eureka-client/**
+        test1:
+            path: /test1/**
+            serviceId: eureka-client
+            # 局部重试
+            retryable: false
+        api-b:
+            path: /api-b/**
+            serviceId: feign-service
+        # 本地转发 如：http://localhohst:9040/api-c/test
+        # 转发到 http://localhost:9040/local/test
+        api-c:
+            path: /api-c/**
+            url: forward:/local
+    # 忽略默认路由规则，如下：此时无法访问
+    # http://localhost:9040/eureka-client/test/test
+    ignored-services: eureka-client
+    # 统一前缀
+    #prefix: /v1
+    # 全局重试
+    retryable: false
