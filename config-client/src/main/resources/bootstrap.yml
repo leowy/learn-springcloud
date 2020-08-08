@@ -1,0 +1,25 @@
+server:
+  port: 9070
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      label:  dev
+      profile: dev
+      # 使用uri
+      # uri: http://localhost:9060
+      name: config
+      # 使用服务发现
+      discovery:
+        service-id: config-server
+        enabled: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8081/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'refresh'
