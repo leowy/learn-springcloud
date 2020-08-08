@@ -1,4 +1,4 @@
-package com.lj.springcloud;
+package com.ly.springcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

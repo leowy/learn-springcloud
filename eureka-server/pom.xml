@@ -75,7 +75,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.3.0.RELEASE</version>
                 <configuration>
-                    <mainClass>com.lj.springcloud.EurekaServerApplication</mainClass>
+                    <mainClass>com.ly.springcloud.EurekaServerApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>
