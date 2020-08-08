@@ -1,0 +1,48 @@
+server:
+    port: 9050
+spring:
+    application:
+        name: gateway-service
+    cloud:
+        gateway:
+
+            discovery:
+                locator:
+                    enabled: true # 代理注册中心所有的服务
+                    lower-case-service-id: true #使用小写服务名，默认是大写
+            routes:
+                - id: eureka-client
+                  # spring.cloud.gateway.discovery.locator.enable未开启，则通过uri转发路由
+                  # lb://EUREKA-CLIENT 表示屏蔽url上的服务前缀
+                  uri: lb://EUREKA-CLIENT #此处需要使用lb协议
+                  filters:
+                      # url路径截取个数
+                      #- StripPrefix=2
+                      # 转发到服务地址添加前缀路径
+                      #- PrefixPath=/test
+                      # 给请求添加参数
+                      #- AddRequestParameter=username, leowy
+                  predicates:
+                      # 通过请求路径匹配
+                      - Path=/**
+                      # 通过 Host 匹配
+                      #- Host=**.leowy.ltd
+                      # 通过 Cookie匹配
+                      #- Cookie=name,leowy
+                      # 通过 Header匹配
+                      #- Header=X-Request-Id, \d+
+                      # 通过请求方式匹配
+                      #- Method=GET
+                      # 通过查询参数匹配
+                      #- Query=username
+                      #通过请求 ip
+                      #- RemoteAddr=192.168.3.1/24
+                      #请求时间在 2020年8月8日13点6分6秒之后的所有请求都转发到服务地址
+                      #- After=2020-08-08T13:06:06+08:00[Asia/Shanghai]
+                      #表示在这个时间之前可以进行路由，在这时间之后停止路由，修改完之后重启项目再次访问地
+                      #- Before=020-08-08T13:06:06+08:00[Asia/Shanghai]
+eureka:
+    client:
+        service-url:
+            defaultZone: http://localhost:8081/eureka/
+
