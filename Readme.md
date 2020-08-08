@@ -10,4 +10,6 @@
 + [负载均衡组件Ribbon](https://github.com/leowy/learn-springcloud/tree/master/ribbon-service)  
 + [网关服务组件zuul](https://github.com/leowy/learn-springcloud/tree/master/zuul-service) 
 + [网关服务组件gateway](https://github.com/leowy/learn-springcloud/tree/master/gateway-service) 
++ [配置中心组件config服务端](https://github.com/leowy/learn-springcloud/tree/master/config-server) 
++ [配置中心组件config客户端](https://github.com/leowy/learn-springcloud/tree/master/config-client) 
 
