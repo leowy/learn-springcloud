@@ -1,0 +1,18 @@
+server:
+    port: 9060
+spring:
+    application:
+        name: config-server
+    cloud:
+        config:
+            server:
+                git:
+                    uri: https://github.com/XXXX/XXXX.git
+                    username: XXXXXXXXXXXX
+                    password: xxxxxxxxxXXX
+                    # 启动直接拉取
+                    clone-on-start: true
+eureka:
+    client:
+        service-url:
+            defaultZone: http://localhost:8081/eureka/
