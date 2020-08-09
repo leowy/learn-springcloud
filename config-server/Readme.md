@@ -1,4 +1,4 @@
-# config
+# config server
 
 ### 获取配置访问格式
         
@@ -12,3 +12,8 @@
 + profile 表示环境名称
 
 
+### 自动刷新配置
++ SpringCloud Bus 
++ 设置github webhooks
++ 依赖actuator
++ 依赖RabbitMQ
