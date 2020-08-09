@@ -1,0 +1,30 @@
+server:
+  port: 9072
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      label:  dev
+      profile: dev
+      # 使用uri
+      # uri: http://localhost:9060
+      name: config
+      # 使用服务发现
+      discovery:
+        service-id: config-server
+        enabled: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8081/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'refresh'
