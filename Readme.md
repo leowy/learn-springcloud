@@ -14,4 +14,5 @@
 + [配置中心组件config客户端](https://github.com/leowy/learn-springcloud/tree/master/config-client) 
 + [Hystrix监控面板hystrix-dashboard](https://github.com/leowy/learn-springcloud/tree/master/hystrix-dashboard) 
 + [Hystrix监控聚合turbine](https://github.com/leowy/learn-springcloud/tree/master/turbine-service) 
++ [服务跟踪组件sleuth-整合zipkin](https://github.com/leowy/learn-springcloud/tree/master/sleuth-service) 
 
