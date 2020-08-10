@@ -1,0 +1,18 @@
+server:
+  port: 10040
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.4.105
+        # 配置文件扩展名
+        file-extension: yml
+        # 配置文件名
+        name: nacos-config-test
+        # 扩展配置
+        extension-configs:
+          -
+            # 扩展文件名
+            dataId: share-config.yml
+            groupId: DEFAULT_GROUP
+            autoRefreshed: true
