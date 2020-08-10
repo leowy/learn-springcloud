@@ -10,9 +10,7 @@ eureka:
 feign:
     hystrix:
         enabled: true
-EUREKA-CLIENT:
-    ribbon:
-        ConnectTimeout: 1
-        OkToRetryOnAllOperation: true
-ribbon:
-    ConnectTimeout:
+#EUREKA-CLIENT:
+#    ribbon:
+#        ConnectTimeout: 1
+#        OkToRetryOnAllOperation: true

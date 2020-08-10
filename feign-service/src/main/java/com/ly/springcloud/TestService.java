@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(value = "EUREKA-CLIENT", fallback = FallbackService.class)
 public interface TestService {
 
-    @GetMapping("/test")
+    @GetMapping("/test/test")
     String feignTest1();
 
-    @GetMapping("/test2")
+    @GetMapping("/test/test2")
     String feignTest2(@RequestParam("id") String id);
 
-    @GetMapping("/test3")
+    @GetMapping("/test/test3")
     String feignTest3(@RequestParam("id") String id);
 }
