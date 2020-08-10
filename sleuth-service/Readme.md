@@ -24,7 +24,9 @@
 ### zipkin说明
         
 SpringBoot 2.X以后不需要搭建服务端，可以直接下载使用
-[zipkin服务端](https://repo1.maven.org/maven2/io/zipkin/java/zipkin-server/2.12.9/zipkin-server-2.12.9-exec.jar)
+[zipkin服务端](https://search.maven.org/remote_content?g=io.zipkin&a=zipkin-server&v=LATEST&c=exec)
+
+[zipkin官网](https://zipkin.io/)
 
 ### sleuth日志说明
 
