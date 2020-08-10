@@ -36,7 +36,7 @@ public class TestService {
 
     @HystrixCommand(fallbackMethod = "defaultMethod") //降级方法调用
     public String hystrixTest1() {
-        return restTemplate.getForObject("http://EUREKA-CLIENT/test", String.class);
+        return restTemplate.getForObject("http://EUREKA-CLIENT/test/test", String.class);
     }
 
     //降级方法
@@ -61,7 +61,7 @@ public class TestService {
     @HystrixCommand(fallbackMethod = "errorMethod")
     public List<String> findAll(List<String> ids) {
         System.out.println("findAll" + ids);
-        List<String> result = restTemplate.getForObject("http://EUREKA-CLIENT/test2?id={1}", List.class, String.join(",",ids));
+        List<String> result = restTemplate.getForObject("http://EUREKA-CLIENT/test/test2?id={1}", List.class, String.join(",",ids));
         return result;
     }
 
@@ -79,7 +79,7 @@ public class TestService {
     @HystrixCommand(fallbackMethod = "error2Method" , commandKey = "getCache") //降级方法调用
     public String hystrixTest3(String id) {
         System.out.println(id + "=>" + id);
-        return restTemplate.getForObject("http://EUREKA-CLIENT/test3?id={1}", String.class, id);
+        return restTemplate.getForObject("http://EUREKA-CLIENT/test/test3?id={1}", String.class, id);
     }
 
     private String getHystrixTest3Key(String id) {
