@@ -20,3 +20,4 @@
 ### SpringCloud Alibaba组件
 + [注册中心组件nacos客户端provider](https://github.com/leowy/learn-springcloud/tree/master/nacos-provider) 
 + [注册中心组件nacos客户端consumer](https://github.com/leowy/learn-springcloud/tree/master/nacos-consumer) 
++ [配置中心组件nacos](https://github.com/leowy/learn-springcloud/tree/master/nacos-config) 
