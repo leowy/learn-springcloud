@@ -12,4 +12,6 @@
 + [网关服务组件gateway](https://github.com/leowy/learn-springcloud/tree/master/gateway-service) 
 + [配置中心组件config服务端](https://github.com/leowy/learn-springcloud/tree/master/config-server) 
 + [配置中心组件config客户端](https://github.com/leowy/learn-springcloud/tree/master/config-client) 
++ [Hystrix监控面板hystrix-dashboard](https://github.com/leowy/learn-springcloud/tree/master/hystrix-dashboard) 
++ [Hystrix监控聚合turbine](https://github.com/leowy/learn-springcloud/tree/master/turbine-service) 
 
