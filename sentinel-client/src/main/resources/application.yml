@@ -1,0 +1,24 @@
+server:
+    port: 10050
+spring:
+    application:
+        name: sentinel-client
+    cloud:
+        sentinel:
+            transport:
+                # sentinel dashboard 地址
+                dashboard: localhost:8080
+            # 规则持久化
+            datasource:
+                ds:
+                    nacos:
+                        server-addr: 192.168.4.105:8848
+                        group-id: DEFAULT_GROUP
+                        rule-type: flow
+                        data-id: sentinel-rule
+                        ###  读取培训文件类型为json
+                        data-type: json
+        nacos:
+            discovery:
+                # nacos注册中心地址
+                server-addr: 192.168.4.105:8848
