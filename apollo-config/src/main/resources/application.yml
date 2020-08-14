@@ -1,0 +1,10 @@
+# 对应apollo 服务端中的AppId
+app.id: zhangw-test
+apollo:
+  # meta server 地址
+  meta: http://192.168.4.105:8088
+  # 与注解@EnableApolloConfig({"application","develop.demo"})意思相同，二选一
+  # 文件内容覆盖顺序，相同字段以靠前的文件字段优先
+#  bootstrap:
+#    enabled: true
+#    namespaces: application,develop.demo
