@@ -4,7 +4,7 @@ spring:
   cloud:
     nacos:
       config:
-        server-addr: 192.168.4.105
+        server-addr: localhost
         # 配置文件扩展名
         file-extension: yml
         # 配置文件名
