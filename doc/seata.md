@@ -37,3 +37,8 @@
             注意事务群组
 
 [seata参数说明](http://seata.io/zh-cn/docs/user/configurations.html)
+
++ 测试使用模块
+    + seata-account-service
+    + seata-order-service
+    + seata-storage-service
