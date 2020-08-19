@@ -5,7 +5,6 @@ spring:
         name: gateway-service
     cloud:
         gateway:
-
             discovery:
                 locator:
                     enabled: true # 代理注册中心所有的服务
