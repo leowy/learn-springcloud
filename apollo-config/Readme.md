@@ -45,12 +45,12 @@ apollo服务端分为3个安装包：apollo-configservice、apollo-adminservice�
 
 + 引入依赖
         
-              
         <dependency>
             <groupId>com.ctrip.framework.apollo</groupId>
             <artifactId>apollo-client</artifactId>
             <version>1.7.0</version>
         </dependency>
+        
 + 配置
         
         # 对应apollo 服务端中的AppId
