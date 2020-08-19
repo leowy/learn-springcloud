@@ -1,0 +1,44 @@
+server:
+    port: 10100
+spring:
+    application:
+        name: seata-order-service
+    cloud:
+        nacos:
+            discovery:
+                server-addr: 127.0.0.1:8848
+                group: SEATA_GROUP
+        alibaba:
+            seata:
+                tx-service-group: leowy_test_group
+    datasource:
+#        driver-class-name: com.mysql.jdbc.Driver
+#        name: '"storageDataSource"'
+        password: lj#123
+        type: com.alibaba.druid.pool.DruidDataSource
+        url: jdbc:mysql://192.168.4.105:3306/seata-order
+        username: oms
+seata:
+#    enabled: true
+#    application-id: ${spring.application.name}
+    tx-service-group: leowy_test_group
+    registry:
+        # 注册中心类型
+        type: nacos
+        nacos:
+            application: seata-server
+            server-addr: 127.0.0.1:8848
+            namespace: public
+    config:
+        # 配置中心类型
+        nacos:
+            group: SEATA_GROUP
+            namespace: public
+            server-addr: 127.0.0.1:8848
+    service:
+        vgroup-mapping:
+            # 事务群组 (值为TC集群名)
+            leowy_test_group: default
+        # TC服务列表(仅注册中心为file时使用)
+#        grouplist:
+#            default: 192.168.4.105:8091
